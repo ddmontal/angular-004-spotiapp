@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import token_info from '../../../api_key.json';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class SpotifyService {
   headers = new HttpHeaders({
     'Authorization':
-      'Bearer '
+      `Bearer ${ token_info.token }`
   });
 
   constructor(private http: HttpClient) {}
