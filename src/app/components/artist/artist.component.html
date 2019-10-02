@@ -1,1 +1,35 @@
-<p>artist works!</p>
+<app-loader *ngIf="loading"></app-loader>
+
+<div *ngIf="!loading" class="row mt-3">
+  <div class="col-lg-2">
+    <img
+      [src]="artist.images | noimage"
+      alt=""
+      class="img-thumbnail img-circle"
+    />
+  </div>
+  <div class="col">
+    <h3>{{ artist.name }}</h3>
+    <p>
+      <a
+        class="text-muted"
+        [href]="artist.external_urls.spotify"
+        target="_blank"
+        ><small>Ir a la página del artista</small></a
+      >
+    </p>
+  </div>
+  <div class="col-lg-4 text-right">
+    <a
+      name=""
+      id=""
+      [routerLink]="['/search']"
+      routerLinkActive="router-link-active"
+      class="btn btn-outline-danger"
+      href="#"
+      role="button"
+    >
+      Regresar
+    </a>
+  </div>
+</div>
