@@ -33,3 +33,34 @@
     </a>
   </div>
 </div>
+
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Cover</th>
+          <th>Album</th>
+          <th>Song</th>
+          <th>Preview</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let topTrack of topTracks">
+          <td scope="row">
+            <img [src]="topTrack.album.images | noimage" class="img-thumb">
+          </td>
+          <td>
+            {{ topTrack.album.name }}
+          </td>
+          <td>
+            {{ topTrack.name }}
+          </td>
+          <td>
+            <audio [src]="topTrack.preview_url" controls></audio>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
