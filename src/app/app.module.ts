@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { NoImagePipe } from './pipes/no-image.pipe';
 import { CardsComponent } from './components/shared/cards/cards.component';
 import { LoaderComponent } from './components/shared/loader/loader.component';
+import { SecuredomPipe } from './pipes/securedom.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
     NavbarComponent,
     NoImagePipe,
     CardsComponent,
-    LoaderComponent
+    LoaderComponent,
+    SecuredomPipe
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 export class ArtistComponent implements OnInit {
   artist: any;
   topTracks: any;
+  spotifyPreviewUrl: string = 'https://open.spotify.com/embed?uri=';
   loading: boolean;
 
   constructor(
